@@ -706,20 +706,6 @@
       "email": "ana@gmail.com",
       "city": "Katowice",
       "id": 101
-    },
-    {
-      "name": "example",
-      "username": "example",
-      "email": "example@uiyiu.com",
-      "city": "example",
-      "id": 102
-    },
-    {
-      "name": "Example",
-      "username": "Example",
-      "email": "Example@yugu",
-      "city": "Example",
-      "id": 103
     }
   ]
 }
