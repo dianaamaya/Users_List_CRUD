@@ -1,9 +1,8 @@
-import styled from "styled-components";
-import { userTheme } from "@/styles/globals/userTheme";
+import styled from 'styled-components'
+import { userTheme } from '@/styles/globals/userTheme'
 
 export const Styles = styled.div`
   padding: 1rem;
-  //width: fit-content;
   display: inline-block;
   max-width: 100%;
   overflow: hidden;
@@ -31,7 +30,7 @@ export const Styles = styled.div`
       padding: 15px;
       border-top: 1.5px solid ${userTheme.tables.backgrounds.gray};
       overflow: hidden;
-      
+
       :nth-last-child(2),
       :last-child {
         border-right: 0;
@@ -40,7 +39,7 @@ export const Styles = styled.div`
     .th .icon {
       position: absolute;
       margin-left: 10px;
-      margin-top: 2px;      
+      margin-top: 2px;
 
       &.sorted {
         margin-top: -2px;
@@ -91,4 +90,4 @@ export const Styles = styled.div`
       }
     }
   }
-`;
+`

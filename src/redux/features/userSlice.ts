@@ -1,20 +1,20 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { IUser } from "../services/userApi";
+import { createSlice } from '@reduxjs/toolkit'
+import { IUser } from '../services/userApi'
 
 interface IState {
-  userToDelete: IUser | null;
-  usersInPage: IUser[];
-  loadingUsersInPage: boolean;
+  userToDelete: IUser | null
+  usersInPage: IUser[]
+  loadingUsersInPage: boolean
 }
 
 const initialState: IState = {
   userToDelete: null,
   usersInPage: [],
-  loadingUsersInPage: false
+  loadingUsersInPage: false,
 }
 
 const userSlice = createSlice({
-  name: "users",
+  name: 'users',
   initialState,
   reducers: {
     setUserToDelete: (state, action) => {
@@ -28,14 +28,10 @@ const userSlice = createSlice({
     },
     setLoadingUsersInPage: (state, action) => {
       state.loadingUsersInPage = action.payload
-    }
-  }
-});
+    },
+  },
+})
 
-export const { 
-  setUserToDelete, 
-  removeUserToDelete, 
-  setUsersInPage, 
-  setLoadingUsersInPage
-} = userSlice.actions;
-export default userSlice.reducer;
+export const { setUserToDelete, removeUserToDelete, setUsersInPage, setLoadingUsersInPage } =
+  userSlice.actions
+export default userSlice.reducer

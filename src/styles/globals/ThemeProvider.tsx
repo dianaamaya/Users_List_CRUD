@@ -1,16 +1,16 @@
-import { ThemeProvider } from "styled-components";
-import { userTheme } from "./userTheme"
-import { GlobalStyles } from "./GlobalStyles"
+import { ThemeProvider } from 'styled-components'
+import { userTheme } from './userTheme'
+import { GlobalStyles } from './GlobalStyles'
 
 interface IChildren {
-    children: React.ReactNode
-  }
+  children: React.ReactNode
+}
 
 const Theme = ({ children }: IChildren) => (
-    <ThemeProvider theme={userTheme}>
-        <GlobalStyles />
-        {children}
-    </ThemeProvider>
-);
+  <ThemeProvider theme={userTheme}>
+    <GlobalStyles />
+    {children}
+  </ThemeProvider>
+)
 
-export default Theme;
+export default Theme

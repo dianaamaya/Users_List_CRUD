@@ -1,25 +1,25 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 export interface IUser {
-    id: string | number;
-    name: string;
-    username: string;
-    city: string;
-    email: string;
+  id: string | number
+  name: string
+  username: string
+  city: string
+  email: string
 }
 
 export type userFields = keyof IUser
 
 export const userApi = createApi({
-  reducerPath: "userApi",
+  reducerPath: 'userApi',
   refetchOnFocus: false,
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:8080/users",
+    baseUrl: 'http://localhost:8080/users',
   }),
   tagTypes: ['Users'],
   endpoints: (builder) => ({
     getUsers: builder.query<IUser[], null>({
-      query: () => "/",
+      query: () => '/',
       providesTags: ['Users'],
     }),
     getUserById: builder.query<IUser, string | number>({
@@ -27,12 +27,12 @@ export const userApi = createApi({
       providesTags: ['Users'],
     }),
     addUser: builder.mutation({
-      query: (userToCreate: Omit<IUser, "id">) => ({
-        url: "/",
+      query: (userToCreate: Omit<IUser, 'id'>) => ({
+        url: '/',
         method: 'POST',
         body: userToCreate,
       }),
-      invalidatesTags: ['Users']
+      invalidatesTags: ['Users'],
     }),
     updateUser: builder.mutation({
       query: (userToUpdate: IUser) => ({
@@ -40,22 +40,22 @@ export const userApi = createApi({
         method: 'PATCH',
         body: userToUpdate,
       }),
-      invalidatesTags: ['Users']
+      invalidatesTags: ['Users'],
     }),
     deleteUser: builder.mutation({
       query: (userId: string | number) => ({
         url: `/${userId}`,
-        method: 'DELETE'
+        method: 'DELETE',
       }),
-      invalidatesTags: ['Users']
-    })
+      invalidatesTags: ['Users'],
+    }),
   }),
-});
+})
 
-export const { 
-  useGetUsersQuery, 
+export const {
+  useGetUsersQuery,
   useGetUserByIdQuery,
   useAddUserMutation,
   useUpdateUserMutation,
   useDeleteUserMutation,
-} = userApi;
+} = userApi

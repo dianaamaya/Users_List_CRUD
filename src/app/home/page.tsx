@@ -1,3 +1,3 @@
 import MainPage from '@/app/page'
 
-export default MainPage;
+export default MainPage

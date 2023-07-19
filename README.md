@@ -1,6 +1,6 @@
 # Users List NextJS + TypeScript + Redux Toolkit + Infinity Loader
 
-This application allows users to create/read/update/delete user list. This project was developed with TypeScript, NextJS, Redux Toolkit, fetch, styled-components, Toaster, react-hook-form, Eslint.
+This application allows users to create/read/update/delete user list. This project was developed with TypeScript, NextJS, Redux Toolkit, fetch, styled-components, Toaster, react-hook-form, Eslint and Prettier.
 
 ### Installation
 

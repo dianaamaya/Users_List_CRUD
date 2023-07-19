@@ -1,3 +1,3 @@
 import UserCreate from '@/components/users/UserCreate'
 
-export default UserCreate;
+export default UserCreate
